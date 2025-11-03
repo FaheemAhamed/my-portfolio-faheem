@@ -54,7 +54,7 @@ function Home() {
                   <div className="flex items-center gap-2">
                     <Terminal className="text-[#8a946f] filter drop-shadow-[0_0_8px_rgba(138,148,111,0.5)]" size={16} />
                     <div>
-                      <div className="text-white text-xs font-medium">React & Angular Expert</div>
+                      <div className="text-white text-xs font-medium">React</div>
                     </div>
                   </div>
                 </div>

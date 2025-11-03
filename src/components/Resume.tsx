@@ -102,6 +102,17 @@ function Resume() {
                   <li>Practiced front-end development tasks using HTML, CSS, and JavaScript</li>
                 </ul>
               </div>
+              <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-6 hover:border-[#768064]/40 transition-all duration-300 group">
+                <h3 className="text-xl font-bold text-[#8a946f] group-hover:text-[#768064] mb-2">FULL STACK DEVELOPMENT (Training)</h3>
+                <p className="text-white font-medium mb-1">NEXTWAVE</p>
+                <p className="text-gray-400 text-sm mb-4">Completed</p>
+                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                  <li>Responsive Web Design (HTML, CSS, BOOTSTRAP)</li>
+                  <li>MySQL Database Management</li>
+                  <li>Beginner Python Programming</li>
+                  <li>JavaScript and FlexBox Design</li>
+                </ul>
+              </div>
             </div>
           </section>
 

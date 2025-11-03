@@ -75,6 +75,32 @@ function Resume() {
             </div>
             <div className="space-y-4">
               <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-6 hover:border-[#768064]/40 transition-all duration-300 group">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-xl font-bold text-[#8a946f] group-hover:text-[#768064]">Full Stack Development (Training)</h3>
+                  <span className="px-3 py-1 bg-[#768064]/10 border border-[#768064]/30 rounded-full text-[#8a946f] text-xs font-semibold">Ongoing</span>
+                </div>
+                <p className="text-white font-medium mb-1">NEXTWAVE</p>
+                <p className="text-gray-400 text-sm mb-4">Present</p>
+                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                  <li className="flex items-center gap-2">
+                    Responsive Web Design (HTML, CSS, BOOTSTRAP)
+                    <span className="px-2 py-0.5 bg-[#768064]/10 border border-[#768064]/30 rounded-full text-[#8a946f] text-xs">Completed</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    MySQL Database Management
+                    <span className="px-2 py-0.5 bg-[#768064]/10 border border-[#768064]/30 rounded-full text-[#8a946f] text-xs">Completed</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    Beginner Python Programming
+                    <span className="px-2 py-0.5 bg-[#768064]/10 border border-[#768064]/30 rounded-full text-[#8a946f] text-xs">Completed</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    JavaScript and FlexBox Design
+                    <span className="px-2 py-0.5 bg-[#768064]/10 border border-[#768064]/30 rounded-full text-[#8a946f] text-xs">Completed</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-6 hover:border-[#768064]/40 transition-all duration-300 group">
                 <h3 className="text-xl font-bold text-[#8a946f] group-hover:text-[#768064] mb-2">Front-end Development Intern (Training)</h3>
                 <p className="text-white font-medium mb-1">InLighnX Global Pvt. Ltd.</p>
                 <p className="text-gray-400 text-sm mb-4">Jul 2025 – Aug 2025</p>
@@ -100,17 +126,6 @@ function Resume() {
                 <p className="text-gray-400 text-sm mb-4">Apr 2024</p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                   <li>Practiced front-end development tasks using HTML, CSS, and JavaScript</li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-6 hover:border-[#768064]/40 transition-all duration-300 group">
-                <h3 className="text-xl font-bold text-[#8a946f] group-hover:text-[#768064] mb-2">FULL STACK DEVELOPMENT (Training)</h3>
-                <p className="text-white font-medium mb-1">NEXTWAVE</p>
-                <p className="text-gray-400 text-sm mb-4">Completed</p>
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  <li>Responsive Web Design (HTML, CSS, BOOTSTRAP)</li>
-                  <li>MySQL Database Management</li>
-                  <li>Beginner Python Programming</li>
-                  <li>JavaScript and FlexBox Design</li>
                 </ul>
               </div>
             </div>

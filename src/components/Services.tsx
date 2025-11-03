@@ -42,38 +42,47 @@ function Services() {
 
   return (
     <div className="min-h-screen bg-black pt-4 md:pt-6 relative overflow-hidden">
+      {/* Background glow effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/6 left-1/8 w-48 h-48 sm:w-80 sm:h-80 md:w-[600px] md:h-[600px] bg-cyan-500/6 rounded-full filter blur-[80px] md:blur-[150px]"></div>
-        <div className="absolute bottom-1/6 right-1/8 w-48 h-48 sm:w-80 sm:h-80 md:w-[600px] md:h-[600px] bg-blue-500/6 rounded-full filter blur-[80px] md:blur-[150px]"></div>
+        <div className="absolute top-1/6 left-1/8 w-48 h-48 sm:w-80 sm:h-80 md:w-[600px] md:h-[600px] bg-[#768064]/6 rounded-full filter blur-[80px] md:blur-[150px] animate-pulse"></div>
+        <div className="absolute bottom-1/6 right-1/8 w-48 h-48 sm:w-80 sm:h-80 md:w-[600px] md:h-[600px] bg-[#768064]/6 rounded-full filter blur-[80px] md:blur-[150px] animate-pulse"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
+        {/* Header section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-full mb-4">
-            <Code2 className="text-cyan-400" size={20} />
-            <span className="text-cyan-400 font-semibold text-sm">SERVICES</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#768064]/10 border border-[#768064]/30 rounded-full mb-4">
+            <Code2 className="text-[#8a946f]" size={20} />
+            <span className="text-[#8a946f] font-semibold text-sm">SERVICES</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            My <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
+            My <span className="bg-gradient-to-r from-[#8a946f] to-[#768064] bg-clip-text text-transparent">Services</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             What I offer to help you achieve your goals and bring your ideas to life
           </p>
         </div>
 
+        {/* Services grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-8 hover:border-cyan-400/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(34,211,238,0.2)] hover:scale-[1.02] group"
+                className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl p-8 
+                hover:border-[#768064]/50 transition-all duration-500 
+                hover:shadow-[0_0_40px_rgba(118,128,100,0.2)] hover:scale-[1.02] group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/10 to-blue-500/10 border border-cyan-400/30 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-cyan-400/20 group-hover:to-blue-500/20 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] group-hover:scale-110 transition-all duration-500">
-                  <Icon className="text-cyan-400 group-hover:text-cyan-300 transition-colors" size={32} />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#768064]/10 to-[#768064]/10 
+                border border-[#768064]/30 rounded-xl flex items-center justify-center mb-6 
+                group-hover:bg-gradient-to-br group-hover:from-[#768064]/20 group-hover:to-[#768064]/20 
+                group-hover:shadow-[0_0_20px_rgba(118,128,100,0.3)] 
+                group-hover:scale-110 transition-all duration-500">
+                  <Icon className="text-[#8a946f] group-hover:text-[#768064] transition-colors" size={32} />
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#8a946f] transition-colors">
                   {service.title}
                 </h3>
 

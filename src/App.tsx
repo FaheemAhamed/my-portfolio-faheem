@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Landing from './components/Landing';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
@@ -8,11 +8,39 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 
 function App() {
-  const [showPortfolio, setShowPortfolio] = useState(false);
-  const [currentPage, setCurrentPage] = useState('HOME');
+  // Initialize states from localStorage or default values
+  const [showPortfolio, setShowPortfolio] = useState(() => {
+    const saved = localStorage.getItem('showPortfolio');
+    return saved ? JSON.parse(saved) : false;
+  });
+  
+  const [currentPage, setCurrentPage] = useState(() => {
+    const saved = localStorage.getItem('currentPage');
+    return saved || 'HOME';
+  });
+
+  // Update localStorage when states change
+  useEffect(() => {
+    localStorage.setItem('showPortfolio', JSON.stringify(showPortfolio));
+  }, [showPortfolio]);
+
+  useEffect(() => {
+    localStorage.setItem('currentPage', currentPage);
+  }, [currentPage]);
+
+  // Handle navigation and portfolio visibility
+  const handleEnter = () => {
+    setShowPortfolio(true);
+  };
+
+  const handleLogoClick = () => {
+    setShowPortfolio(false);
+    localStorage.removeItem('showPortfolio');
+    localStorage.removeItem('currentPage');
+  };
 
   if (!showPortfolio) {
-    return <Landing onEnter={() => setShowPortfolio(true)} />;
+    return <Landing onEnter={handleEnter} />;
   }
 
   const renderPage = () => {
@@ -34,7 +62,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black">
-      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
+      <Navigation 
+        currentPage={currentPage} 
+        onNavigate={setCurrentPage}
+        onLogoClick={handleLogoClick}
+      />
       {renderPage()}
     </div>
   );

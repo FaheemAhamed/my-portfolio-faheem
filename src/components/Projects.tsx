@@ -49,52 +49,54 @@ function Projects() {
 
   return (
     <div className="min-h-screen bg-black py-20 relative overflow-hidden">
-      {/* Improved background effects */}
+      {/* Updated background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-[1000px] h-[1000px] bg-cyan-500/5 rounded-full filter blur-[180px] -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[1000px] h-[1000px] bg-blue-500/5 rounded-full filter blur-[180px] translate-x-1/2 translate-y-1/2"></div>
+        <div className="absolute top-0 left-0 w-[1000px] h-[1000px] bg-[#768064]/5 rounded-full filter blur-[180px] -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-[1000px] h-[1000px] bg-[#8a946f]/5 rounded-full filter blur-[180px] translate-x-1/2 translate-y-1/2 animate-pulse"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Enhanced header section */}
         <div className="text-center max-w-3xl mx-auto mb-24">
-          <div className="inline-flex items-center gap-3 px-6 py-2.5 bg-cyan-400/10 border border-cyan-400/30 rounded-full mb-8 hover:bg-cyan-400/20 transition-all duration-300">
-            <Code className="text-cyan-400" size={22} />
-            <span className="text-cyan-400 font-semibold tracking-wider">PORTFOLIO</span>
+          <div className="inline-flex items-center gap-3 px-6 py-2.5 bg-[#768064]/10 border border-[#768064]/30 rounded-full mb-8 hover:bg-[#768064]/20 transition-all duration-300">
+            <Code className="text-[#8a946f]" size={22} />
+            <span className="text-[#8a946f] font-semibold tracking-wider">PORTFOLIO</span>
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-            My Recent <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Projects</span>
+            My Recent <span className="bg-gradient-to-r from-[#8a946f] to-[#768064] bg-clip-text text-transparent">Projects</span>
           </h1>
           <p className="text-gray-400 text-xl leading-relaxed">
             Showcasing my expertise in web development through real-world applications
           </p>
         </div>
 
-        {/* Improved project grid with more spacing */}
+        {/* Updated project grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-400/50 transition-all duration-500 hover:shadow-[0_0_50px_rgba(34,211,238,0.15)] hover:-translate-y-2"
+                className="group bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-2xl overflow-hidden 
+                hover:border-[#768064]/50 transition-all duration-500 
+                hover:shadow-[0_0_50px_rgba(118,128,100,0.15)] hover:-translate-y-2"
               >
-                {/* Taller project header */}
                 <div
                   className="h-56 relative overflow-hidden"
                   style={{ background: project.image }}
                 >
                   <div className="absolute inset-0 bg-black/75 group-hover:bg-black/60 transition-all duration-500"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-24 h-24 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20 group-hover:border-cyan-400/50 group-hover:bg-cyan-400/20 transition-all duration-500 group-hover:scale-110">
-                      <Icon className="text-white group-hover:text-cyan-400 transition-colors" size={44} />
+                    <div className="w-24 h-24 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    border border-white/20 group-hover:border-[#768064]/50 
+                    group-hover:bg-[#768064]/20 transition-all duration-500 group-hover:scale-110">
+                      <Icon className="text-white group-hover:text-[#8a946f] transition-colors" size={44} />
                     </div>
                   </div>
                 </div>
 
-                {/* Enhanced content section with better spacing */}
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[#8a946f] transition-colors">
                     {project.title}
                   </h3>
 
@@ -102,12 +104,15 @@ function Projects() {
                     {project.description}
                   </p>
 
-                  {/* Improved tech stack badges */}
+                  {/* Updated tech stack badges */}
                   <div className="flex flex-wrap gap-2.5">
                     {project.tech.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-4 py-2 text-sm bg-cyan-400/5 border border-cyan-400/20 text-cyan-400 rounded-lg font-medium group-hover:bg-cyan-400/10 group-hover:border-cyan-400/40 transition-all duration-300"
+                        className="px-4 py-2 text-sm bg-[#768064]/5 border border-[#768064]/20 
+                        text-[#8a946f] rounded-lg font-medium 
+                        group-hover:bg-[#768064]/10 group-hover:border-[#768064]/40 
+                        transition-all duration-300"
                       >
                         {tech}
                       </span>
